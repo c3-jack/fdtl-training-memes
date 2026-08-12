@@ -1,0 +1,4 @@
+entity type HelpAgent {
+  displayName: !string
+  office: !string
+}

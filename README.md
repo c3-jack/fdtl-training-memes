@@ -1,16 +1,34 @@
 # FDTL Training — C3
 
 The shared working repository for Week 2 of FDTL 100, Agentic Coding for Forward Deployed
-Engineers. Unlike Week 1, there is no starter application here. `main` holds only this README and
-`CONTRIBUTING.md` — every trainee scaffolds their own C3 package from scratch on their own branch.
+Engineers. `main` holds `fdtlHelpdesk`, a small C3 package: a helpdesk ticket type, an agent
+type, and seed data. It is deliberately imperfect — some of what it does is wrong, and some of
+what it should do is missing. Your ticket tells you which part is yours.
 
-## What goes here
+## Running it
 
-Your assignment has you build a small helpdesk slice on your own C3 environment: a data model, an
-aggregating backend method, a role grant, and a React page. Scaffold the package through the C3
-MCP server, sync it to your own SNE, and when it works, push it to this repository on your own
-branch.
+Sync the package to your own single-node environment. Your assignment covers the bootstrap
+order — an `ide`-rooted app first, then this package.
 
-There is no application to run from this repository directly — everything runs against your own
-environment. `CONTRIBUTING.md` covers the branch and pull-request conventions; your assignment
-handout covers what the package itself has to contain.
+```
+c3 sync . -s <your-ide-rooted-app-url> --no-tty
+```
+
+There is no React frontend this week. Everything is verified in the static console or with a
+test, against your own environment.
+
+## Layout
+
+```
+fdtlHelpdesk.c3pkg.json           the package itself
+src/HelpTicket.c3typ              subject, priority, status, openedAt, a reference to HelpAgent
+src/HelpTicket.js                 openHighPriorityTickets() -- ships with a real bug, see W2-1
+src/HelpAgent.c3typ               displayName, office
+metadata/Role/fdtlHelpdesk.Role.Agent.json   the non-admin role your grant (W2-2) targets
+seed/                             30 tickets, 6 agents
+```
+
+## Working in this repository
+
+Read `CONTRIBUTING.md` before your first commit. It covers branch naming, what a commit is
+expected to contain, and what a pull request into this repository has to show.

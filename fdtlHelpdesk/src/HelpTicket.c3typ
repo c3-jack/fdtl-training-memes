@@ -1,0 +1,9 @@
+entity type HelpTicket {
+  subject: !string
+  priority: !string enum('High', 'Medium', 'Low')
+  status: string enum('Open', 'InProgress', 'Closed') = "Open"
+  openedAt: !datetime
+  assignee: HelpAgent
+
+  openHighPriorityTickets: function(): [HelpTicket] js
+}

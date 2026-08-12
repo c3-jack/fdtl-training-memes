@@ -1,0 +1,11 @@
+{
+  "id": "fdtlHelpdesk.Role.Agent",
+  "description": "Non-admin helpdesk agent role: read tickets and agents.",
+  "nestedRoles": [],
+  "permissions": [
+    "allow:HelpTicket:read:",
+    "allow:HelpTicket::openHighPriorityTickets",
+    "allow:HelpAgent:read:"
+  ],
+  "dataPermissions": []
+}

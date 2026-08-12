@@ -1,26 +1,28 @@
-## Package
+## Ticket
 
-What the package does, in the terms a customer looking at the page would describe it. Link your
-SNE app URL.
+Which one — `W2-1` or `W2-2` — and what was wrong or missing, in the terms someone staffing the
+helpdesk would describe it.
 
-## The two forced failures
+## Prediction and failure
 
-For each one: what you predicted before triggering it, what actually happened, and what the fix
-was. Both failures have to appear here — a pull request that never mentions a failure is sent
-back.
+What you expected before you first ran the call your ticket describes, and what you actually got.
+This has to be here, not just the fixed state — a pull request that never mentions the failure is
+sent back.
 
-1. **The assignee column.**
-2. **The ungranted method.**
+## Change
+
+What you changed and why this is the smallest change that fixes or builds it.
 
 ## Verification
 
-What you did to convince yourself the fix works, and what you observed on your own environment.
-Name the commands you ran and the values you saw in the browser and the static console.
+What you did to convince yourself it works, on your own environment, and what you observed.
 
-- [ ] `npm run build` passes
-- [ ] `npm run lint` passes
-- [ ] Playwright check confirms the aggregated counts and the assignee names render
-- [ ] The aggregation method was called as both an administrator and a non-administrator role
+- [ ] Reproduced the ticket's failure in the static console, predicted first
+- [ ] Fixed or built it
+- [ ] A test passes, checked against every returned ticket or an independent count — not a
+      number I hard-coded
+- [ ] (`W2-2` only) The grant is in this same pull request, and I called the method as
+      `fdtlHelpdesk.Role.Agent`, not just as an administrator
 
 ## Not verified
 
@@ -28,4 +30,4 @@ What you did not check, and anything a reviewer should look at more carefully th
 
 ## Assumptions
 
-Anything you had to decide for yourself because the assignment did not say.
+Anything you had to decide for yourself because the ticket did not say.
