@@ -20,9 +20,10 @@ branch, one pull request, all three tickets.
 
 ## Your tickets
 
-All three tickets — `W2-1`, `W2-2`, `W2-3` — filed as GitHub issues against this repository, are
-yours. Build all three and nothing else. If you notice a problem outside these three while
-you're in there, note it in your write-up and move on; it's not this week's assignment.
+All three tickets — `W2-1`, `W2-2`, `W2-3` — are printed in full in your assignment handout. It
+is the source of truth for what was asked; nothing here or in a Teams message overrides it. Build
+all three and nothing else. If you notice a problem outside these three while you're in there,
+note it in your write-up and move on; it's not this week's assignment.
 
 ## Before you open a pull request
 
