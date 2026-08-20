@@ -1,8 +1,0 @@
-[
-  { "id": "seed_helpAgent_jsmith", "displayName": "Jordan Smith", "office": "Denver" },
-  { "id": "seed_helpAgent_mrivera", "displayName": "Maria Rivera", "office": "Austin" },
-  { "id": "seed_helpAgent_tchen", "displayName": "Tyler Chen", "office": "Seattle" },
-  { "id": "seed_helpAgent_akhan", "displayName": "Amara Khan", "office": "Boston" },
-  { "id": "seed_helpAgent_lgarcia", "displayName": "Luis Garcia", "office": "Chicago" },
-  { "id": "seed_helpAgent_bwalsh", "displayName": "Brianna Walsh", "office": "Remote" }
-]

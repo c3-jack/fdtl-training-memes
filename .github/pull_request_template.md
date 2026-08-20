@@ -1,28 +1,28 @@
-## Ticket
+## Tickets
 
-Which one — `W2-1` or `W2-2` — and what was wrong or missing, in the terms someone staffing the
-helpdesk would describe it.
+`W2-1`, `W2-2`, `W2-3` — all three. What was wrong or missing in each, in the terms someone
+curating the meme feed would describe it.
 
-## Prediction and failure
+## Before and after
 
-What you expected before you first ran the call your ticket describes, and what you actually got.
-This has to be here, not just the fixed state — a pull request that never mentions the failure is
-sent back.
+What each broken or missing call did before your fix, and what it does now. This has to be here
+for all three — a pull request that never shows the "before" is sent back.
 
 ## Change
 
-What you changed and why this is the smallest change that fixes or builds it.
+What you changed for each ticket and why this is the smallest change that fixes or builds it.
 
 ## Verification
 
-What you did to convince yourself it works, on your own environment, and what you observed.
+What you did to convince yourself each of the three works, on your own environment, and what you
+observed.
 
-- [ ] Reproduced the ticket's failure in the static console, predicted first
-- [ ] Fixed or built it
-- [ ] A test passes, checked against every returned ticket or an independent count — not a
-      number I hard-coded
-- [ ] (`W2-2` only) The grant is in this same pull request, and I called the method as
-      `fdtlHelpdesk.Role.Agent`, not just as an administrator
+- [ ] All three tickets reproduced broken in the static console before any fix
+- [ ] All three fixed or built
+- [ ] A test passes for each, checked against every returned meme or an independent count — not
+      a number I hard-coded
+- [ ] `W2-2` and `W2-3`: the grant is in the same pull request as its method, and I called both
+      as `fdtlMemeMaker.Role.Curator`, not just as an administrator
 
 ## Not verified
 

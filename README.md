@@ -1,9 +1,9 @@
 # FDTL Training — C3
 
 The shared working repository for Week 2 of FDTL 100, Agentic Coding for Forward Deployed
-Engineers. `main` holds `fdtlHelpdesk`, a small C3 package: a helpdesk ticket type, an agent
-type, and seed data. It is deliberately imperfect — some of what it does is wrong, and some of
-what it should do is missing. Your ticket tells you which part is yours.
+Engineers. `main` holds `fdtlMemeMaker`, a small C3 package: a meme type, an author type, and
+seed data. It is deliberately imperfect — some of what it does is wrong, and some of what it
+should do is missing. Your assignment tells you which parts are yours.
 
 ## Running it
 
@@ -20,12 +20,12 @@ test, against your own environment.
 ## Layout
 
 ```
-fdtlHelpdesk.c3pkg.json           the package itself
-src/HelpTicket.c3typ              subject, priority, status, openedAt, a reference to HelpAgent
-src/HelpTicket.js                 openHighPriorityTickets() -- ships with a real bug, see W2-1
-src/HelpAgent.c3typ               displayName, office
-metadata/Role/fdtlHelpdesk.Role.Agent.json   the non-admin role your grant (W2-2) targets
-seed/                             30 tickets, 6 agents
+fdtlMemeMaker.c3pkg.json          the package itself
+src/Meme.c3typ                    caption, category, status, postedAt, a reference to MemeAuthor
+src/Meme.js                       frontPageMemes() -- ships with a real bug, see W2-1
+src/MemeAuthor.c3typ              displayName, handle
+metadata/Role/fdtlMemeMaker.Role.Curator.json   the non-admin role your grants (W2-2, W2-3) target
+seed/                             30 memes, 6 authors
 ```
 
 ## Working in this repository

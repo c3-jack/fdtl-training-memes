@@ -1,0 +1,11 @@
+{
+  "id": "fdtlMemeMaker.Role.Curator",
+  "description": "Non-admin meme curator role: read memes and authors.",
+  "nestedRoles": [],
+  "permissions": [
+    "allow:Meme:read:",
+    "allow:Meme::frontPageMemes",
+    "allow:MemeAuthor:read:"
+  ],
+  "dataPermissions": []
+}

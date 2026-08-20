@@ -1,0 +1,8 @@
+[
+  { "id": "seed_memeAuthor_jsmith", "displayName": "Jordan Smith", "handle": "@jsmith.memes" },
+  { "id": "seed_memeAuthor_mrivera", "displayName": "Maria Rivera", "handle": "@rivera.rips" },
+  { "id": "seed_memeAuthor_tchen", "displayName": "Tyler Chen", "handle": "@tchen.jpeg" },
+  { "id": "seed_memeAuthor_akhan", "displayName": "Amara Khan", "handle": "@khan.dank" },
+  { "id": "seed_memeAuthor_lgarcia", "displayName": "Luis Garcia", "handle": "@lg.lowres" },
+  { "id": "seed_memeAuthor_bwalsh", "displayName": "Brianna Walsh", "handle": "@bwalsh.exe" }
+]

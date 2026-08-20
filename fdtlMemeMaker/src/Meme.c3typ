@@ -1,0 +1,9 @@
+entity type Meme {
+  caption: !string
+  category: !string enum('Wholesome', 'Cursed', 'DeepFried')
+  status: string enum('Draft', 'Published', 'Archived') = "Draft"
+  postedAt: !datetime
+  author: MemeAuthor
+
+  frontPageMemes: function(): [Meme] js
+}

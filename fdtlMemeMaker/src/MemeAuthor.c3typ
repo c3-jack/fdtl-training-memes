@@ -1,0 +1,4 @@
+entity type MemeAuthor {
+  displayName: !string
+  handle: !string
+}
