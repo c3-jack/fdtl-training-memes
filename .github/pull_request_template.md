@@ -1,28 +1,32 @@
-## Tickets
+## Bug and features
 
-`W2-1`, `W2-2`, `W2-3` — all three. What was wrong or missing in each, in the terms someone
-curating the meme feed would describe it.
+`W2-1` (the bug) plus Feature A and Feature B, all mandatory. What was wrong or missing in each,
+in the terms someone curating the meme feed would describe it.
 
 ## Before and after
 
 What each broken or missing call did before your fix, and what it does now. This has to be here
-for all three — a pull request that never shows the "before" is sent back.
+for all three (the bug and both features) — a pull request that never shows the "before" is sent
+back. The recording doesn't need to re-demonstrate the broken state; this section is where it's
+proven in writing.
 
 ## Change
 
-What you changed for each ticket and why this is the smallest change that fixes or builds it.
+What you changed for the bug and each feature, and why this is the smallest change that fixes or
+builds it.
 
 ## Verification
 
-What you did to convince yourself each of the three works, on your own environment, and what you
-observed.
+What you did to convince yourself the bug fix and both features work, on your own environment,
+and what you observed.
 
-- [ ] All three tickets reproduced broken in the static console before any fix
-- [ ] All three fixed or built
+- [ ] The bug and both features reproduced broken (or confirmed not to exist yet) in the static
+      console before any fix
+- [ ] The bug fixed and both features built
 - [ ] A test passes for each, checked against every returned meme or an independent count — not
       a number I hard-coded
-- [ ] `W2-2` and `W2-3`: the grant is in the same pull request as its method, and I called both
-      as `fdtlMemeMaker.Role.Curator`, not just as an administrator
+- [ ] For each feature: the grant is in the same pull request as its method, in the exact
+      `allow:Meme::methodName` form already used by the role's other entries
 
 ## Not verified
 

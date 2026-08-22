@@ -1,0 +1,590 @@
+[
+  {
+    "id": "seed_template_drake",
+    "name": "Drake Hotline Bling",
+    "imageUrl": "https://i.imgflip.com/30b1gx.jpg",
+    "width": 1200,
+    "height": 1200
+  },
+  {
+    "id": "seed_template_twobuttons",
+    "name": "Two Buttons",
+    "imageUrl": "https://i.imgflip.com/1g8my4.jpg",
+    "width": 600,
+    "height": 908
+  },
+  {
+    "id": "seed_template_changemymind",
+    "name": "Change My Mind",
+    "imageUrl": "https://i.imgflip.com/24y43o.jpg",
+    "width": 482,
+    "height": 361
+  },
+  {
+    "id": "seed_template_disastergirl",
+    "name": "Disaster Girl",
+    "imageUrl": "https://i.imgflip.com/23ls.jpg",
+    "width": 500,
+    "height": 375
+  },
+  {
+    "id": "seed_template_sadpablo",
+    "name": "Sad Pablo Escobar",
+    "imageUrl": "https://i.imgflip.com/1c1uej.jpg",
+    "width": 720,
+    "height": 709
+  },
+  {
+    "id": "seed_template_gruplan",
+    "name": "Gru's Plan",
+    "imageUrl": "https://i.imgflip.com/26jxvz.jpg",
+    "width": 700,
+    "height": 449
+  },
+  {
+    "id": "seed_template_waitingskeleton",
+    "name": "Waiting Skeleton",
+    "imageUrl": "https://i.imgflip.com/2fm6x.jpg",
+    "width": 298,
+    "height": 403
+  },
+  {
+    "id": "seed_template_epichandshake",
+    "name": "Epic Handshake",
+    "imageUrl": "https://i.imgflip.com/28j0te.jpg",
+    "width": 900,
+    "height": 645
+  },
+  {
+    "id": "seed_template_alwayshasbeen",
+    "name": "Always Has Been",
+    "imageUrl": "https://i.imgflip.com/46e43q.png",
+    "width": 960,
+    "height": 540
+  },
+  {
+    "id": "seed_template_distractedboyfriend",
+    "name": "Distracted Boyfriend",
+    "imageUrl": "https://i.imgflip.com/1ur9b0.jpg",
+    "width": 1200,
+    "height": 800
+  },
+  {
+    "id": "seed_template_tradeoffer",
+    "name": "Trade Offer",
+    "imageUrl": "https://i.imgflip.com/54hjww.jpg",
+    "width": 607,
+    "height": 794
+  },
+  {
+    "id": "seed_template_ancientaliens",
+    "name": "Ancient Aliens",
+    "imageUrl": "https://i.imgflip.com/26am.jpg",
+    "width": 500,
+    "height": 437
+  },
+  {
+    "id": "seed_template_onedoesnotsimply",
+    "name": "One Does Not Simply",
+    "imageUrl": "https://i.imgflip.com/1bij.jpg",
+    "width": 568,
+    "height": 335
+  },
+  {
+    "id": "seed_template_mockingspongebob",
+    "name": "Mocking Spongebob",
+    "imageUrl": "https://i.imgflip.com/1otk96.jpg",
+    "width": 502,
+    "height": 353
+  },
+  {
+    "id": "seed_template_womanyellingatcat",
+    "name": "Woman Yelling At Cat",
+    "imageUrl": "https://i.imgflip.com/345v97.jpg",
+    "width": 680,
+    "height": 438
+  },
+  {
+    "id": "seed_template_isthisapigeon",
+    "name": "Is This A Pigeon",
+    "imageUrl": "https://i.imgflip.com/1o00in.jpg",
+    "width": 1587,
+    "height": 1425
+  },
+  {
+    "id": "seed_template_expandingbrain",
+    "name": "Expanding Brain",
+    "imageUrl": "https://i.imgflip.com/1jwhww.jpg",
+    "width": 857,
+    "height": 1202
+  },
+  {
+    "id": "seed_template_samepicture",
+    "name": "They're The Same Picture",
+    "imageUrl": "https://i.imgflip.com/2za3u1.jpg",
+    "width": 1363,
+    "height": 1524
+  },
+  {
+    "id": "seed_template_tuxedowinniethepooh",
+    "name": "Tuxedo Winnie The Pooh",
+    "imageUrl": "https://i.imgflip.com/2ybua0.png",
+    "width": 800,
+    "height": 582
+  },
+  {
+    "id": "seed_template_buffdogecheems",
+    "name": "Buff Doge vs. Cheems",
+    "imageUrl": "https://i.imgflip.com/43a45p.png",
+    "width": 937,
+    "height": 720
+  },
+  {
+    "id": "seed_template_thisisfine",
+    "name": "This Is Fine",
+    "imageUrl": "https://i.imgflip.com/wxica.jpg",
+    "width": 580,
+    "height": 282
+  },
+  {
+    "id": "seed_template_flextape",
+    "name": "Flex Tape",
+    "imageUrl": "https://i.imgflip.com/2reqtg.png",
+    "width": 510,
+    "height": 572
+  },
+  {
+    "id": "seed_template_anakinpadme",
+    "name": "Anakin Padme 4 Panel",
+    "imageUrl": "https://i.imgflip.com/5c7lwq.png",
+    "width": 768,
+    "height": 768
+  },
+  {
+    "id": "seed_template_bellcurve",
+    "name": "Bell Curve",
+    "imageUrl": "https://i.imgflip.com/8tw3vb.png",
+    "width": 675,
+    "height": 499
+  },
+  {
+    "id": "seed_template_unodraw25",
+    "name": "UNO Draw 25 Cards",
+    "imageUrl": "https://i.imgflip.com/3lmzyx.jpg",
+    "width": 500,
+    "height": 494
+  },
+  {
+    "id": "seed_template_leftexit12",
+    "name": "Left Exit 12 Off Ramp",
+    "imageUrl": "https://i.imgflip.com/22bdq6.jpg",
+    "width": 804,
+    "height": 767
+  },
+  {
+    "id": "seed_template_runningballoon",
+    "name": "Running Away Balloon",
+    "imageUrl": "https://i.imgflip.com/261o3j.jpg",
+    "width": 761,
+    "height": 1024
+  },
+  {
+    "id": "seed_template_markedsafe",
+    "name": "Marked Safe From",
+    "imageUrl": "https://i.imgflip.com/2odckz.jpg",
+    "width": 618,
+    "height": 499
+  },
+  {
+    "id": "seed_template_xeverywhere",
+    "name": "X, X Everywhere",
+    "imageUrl": "https://i.imgflip.com/1ihzfe.jpg",
+    "width": 2118,
+    "height": 1440
+  },
+  {
+    "id": "seed_template_batmanslapping",
+    "name": "Batman Slapping Robin",
+    "imageUrl": "https://i.imgflip.com/9ehk.jpg",
+    "width": 400,
+    "height": 387
+  },
+  {
+    "id": "seed_template_gettingpaid",
+    "name": "You Guys are Getting Paid",
+    "imageUrl": "https://i.imgflip.com/2xscjb.png",
+    "width": 520,
+    "height": 358
+  },
+  {
+    "id": "seed_template_absolutecinema",
+    "name": "Absolute Cinema",
+    "imageUrl": "https://i.imgflip.com/8d317n.png",
+    "width": 936,
+    "height": 725
+  },
+  {
+    "id": "seed_template_squidwardwindow",
+    "name": "Squidward window",
+    "imageUrl": "https://i.imgflip.com/145qvv.jpg",
+    "width": 598,
+    "height": 420
+  },
+  {
+    "id": "seed_template_trophy",
+    "name": "This Is Where I'd Put My Trophy If I Had One",
+    "imageUrl": "https://i.imgflip.com/1wz1x.jpg",
+    "width": 300,
+    "height": 418
+  },
+  {
+    "id": "seed_template_megamindpeeking",
+    "name": "Megamind peeking",
+    "imageUrl": "https://i.imgflip.com/64sz4u.png",
+    "width": 540,
+    "height": 540
+  },
+  {
+    "id": "seed_template_oprahyouget",
+    "name": "Oprah You Get A",
+    "imageUrl": "https://i.imgflip.com/gtj5t.jpg",
+    "width": 620,
+    "height": 465
+  },
+  {
+    "id": "seed_template_clownmakeup",
+    "name": "Clown Applying Makeup",
+    "imageUrl": "https://i.imgflip.com/38el31.jpg",
+    "width": 750,
+    "height": 798
+  },
+  {
+    "id": "seed_template_spidermantriple",
+    "name": "Spider Man Triple",
+    "imageUrl": "https://i.imgflip.com/3eqjd8.jpg",
+    "width": 600,
+    "height": 551
+  },
+  {
+    "id": "seed_template_monkeypuppet",
+    "name": "Monkey Puppet",
+    "imageUrl": "https://i.imgflip.com/2gnnjh.jpg",
+    "width": 923,
+    "height": 768
+  },
+  {
+    "id": "seed_template_twoguysbus",
+    "name": "Two guys on a bus",
+    "imageUrl": "https://i.imgflip.com/5v6gwj.jpg",
+    "width": 762,
+    "height": 675
+  },
+  {
+    "id": "seed_template_hidethepain",
+    "name": "Hide the Pain Harold",
+    "imageUrl": "https://i.imgflip.com/gk5el.jpg",
+    "width": 480,
+    "height": 601
+  },
+  {
+    "id": "seed_template_rollsafe",
+    "name": "Roll Safe Think About It",
+    "imageUrl": "https://i.imgflip.com/1h7in3.jpg",
+    "width": 702,
+    "height": 395
+  },
+  {
+    "id": "seed_template_boardroom",
+    "name": "Boardroom Meeting Suggestion",
+    "imageUrl": "https://i.imgflip.com/m78d.jpg",
+    "width": 500,
+    "height": 649
+  },
+  {
+    "id": "seed_template_sleepingshaq",
+    "name": "Sleeping Shaq",
+    "imageUrl": "https://i.imgflip.com/1nck6k.jpg",
+    "width": 640,
+    "height": 631
+  },
+  {
+    "id": "seed_template_evilkermit",
+    "name": "Evil Kermit",
+    "imageUrl": "https://i.imgflip.com/1e7ql7.jpg",
+    "width": 700,
+    "height": 325
+  },
+  {
+    "id": "seed_template_bikefall",
+    "name": "Bike Fall",
+    "imageUrl": "https://i.imgflip.com/1b42wl.jpg",
+    "width": 500,
+    "height": 680
+  },
+  {
+    "id": "seed_template_zerodayslenny",
+    "name": "0 days without (Lenny, Simpsons)",
+    "imageUrl": "https://i.imgflip.com/72epa9.png",
+    "width": 619,
+    "height": 403
+  },
+  {
+    "id": "seed_template_pawnstars",
+    "name": "Pawn Stars Best I Can Do",
+    "imageUrl": "https://i.imgflip.com/19vcz0.jpg",
+    "width": 624,
+    "height": 352
+  },
+  {
+    "id": "seed_template_theydontknow",
+    "name": "They don't know",
+    "imageUrl": "https://i.imgflip.com/4pn1an.png",
+    "width": 671,
+    "height": 673
+  },
+  {
+    "id": "seed_template_friendshipended",
+    "name": "Friendship ended",
+    "imageUrl": "https://i.imgflip.com/29v4rt.jpg",
+    "width": 800,
+    "height": 600
+  },
+  {
+    "id": "seed_template_imaginationspongebob",
+    "name": "Imagination Spongebob",
+    "imageUrl": "https://i.imgflip.com/3i7p.jpg",
+    "width": 500,
+    "height": 366
+  },
+  {
+    "id": "seed_template_allmyhomieshate",
+    "name": "All My Homies Hate",
+    "imageUrl": "https://i.imgflip.com/3kwur5.jpg",
+    "width": 680,
+    "height": 615
+  },
+  {
+    "id": "seed_template_typesofheadaches",
+    "name": "Types of Headaches meme",
+    "imageUrl": "https://i.imgflip.com/1yz6z4.jpg",
+    "width": 483,
+    "height": 497
+  },
+  {
+    "id": "seed_template_animegirlhidingterminator",
+    "name": "Anime Girl Hiding from Terminator",
+    "imageUrl": "https://i.imgflip.com/3po4m7.jpg",
+    "width": 581,
+    "height": 633
+  },
+  {
+    "id": "seed_template_inhalingseagull",
+    "name": "Inhaling Seagull",
+    "imageUrl": "https://i.imgflip.com/1w7ygt.jpg",
+    "width": 1269,
+    "height": 2825
+  },
+  {
+    "id": "seed_template_somethingofascientist",
+    "name": "You know, I'm something of a scientist myself",
+    "imageUrl": "https://i.imgflip.com/27qxmb.jpg",
+    "width": 1200,
+    "height": 600
+  },
+  {
+    "id": "seed_template_threeheadeddragon",
+    "name": "Three-headed Dragon",
+    "imageUrl": "https://i.imgflip.com/33e92f.jpg",
+    "width": 680,
+    "height": 544
+  },
+  {
+    "id": "seed_template_isthisbutterfly",
+    "name": "is this butterfly",
+    "imageUrl": "https://i.imgflip.com/2cjr7j.jpg",
+    "width": 1587,
+    "height": 1425
+  },
+  {
+    "id": "seed_template_noyes",
+    "name": "No - Yes",
+    "imageUrl": "https://i.imgflip.com/24zoa8.jpg",
+    "width": 429,
+    "height": 343
+  },
+  {
+    "id": "seed_template_scoobydoomaskreveal",
+    "name": "Scooby doo mask reveal",
+    "imageUrl": "https://i.imgflip.com/2eeunw.jpg",
+    "width": 720,
+    "height": 960
+  },
+  {
+    "id": "seed_template_whisperandgoosebumps",
+    "name": "Whisper and Goosebumps",
+    "imageUrl": "https://i.imgflip.com/1op9wy.jpg",
+    "width": 600,
+    "height": 600
+  },
+  {
+    "id": "seed_template_blanknutbutton",
+    "name": "Blank Nut Button",
+    "imageUrl": "https://i.imgflip.com/1yxkcp.jpg",
+    "width": 600,
+    "height": 446
+  },
+  {
+    "id": "seed_template_ajstylesundertaker",
+    "name": "AJ Styles & Undertaker",
+    "imageUrl": "https://i.imgflip.com/3vfrmx.jpg",
+    "width": 933,
+    "height": 525
+  },
+  {
+    "id": "seed_template_futuramafry",
+    "name": "Futurama Fry",
+    "imageUrl": "https://i.imgflip.com/1bgw.jpg",
+    "width": 552,
+    "height": 414
+  },
+  {
+    "id": "seed_template_spidermanpointing",
+    "name": "spiderman pointing at spiderman",
+    "imageUrl": "https://i.imgflip.com/1tkjq9.jpg",
+    "width": 800,
+    "height": 450
+  },
+  {
+    "id": "seed_template_grantgustinovergrave",
+    "name": "Grant Gustin over grave",
+    "imageUrl": "https://i.imgflip.com/3nx72a.png",
+    "width": 500,
+    "height": 475
+  },
+  {
+    "id": "seed_template_dominoeffect",
+    "name": "Domino Effect",
+    "imageUrl": "https://i.imgflip.com/2oo7h0.jpg",
+    "width": 820,
+    "height": 565
+  },
+  {
+    "id": "seed_template_panikkalmpanik",
+    "name": "Panik Kalm Panik",
+    "imageUrl": "https://i.imgflip.com/3qqcim.png",
+    "width": 640,
+    "height": 881
+  },
+  {
+    "id": "seed_template_grandmafindsinternet",
+    "name": "Grandma Finds The Internet",
+    "imageUrl": "https://i.imgflip.com/1bhw.jpg",
+    "width": 640,
+    "height": 480
+  },
+  {
+    "id": "seed_template_surprisedpikachu",
+    "name": "Surprised Pikachu",
+    "imageUrl": "https://i.imgflip.com/2kbn1e.jpg",
+    "width": 1893,
+    "height": 1893
+  },
+  {
+    "id": "seed_template_imthecaptainnow",
+    "name": "I'm The Captain Now",
+    "imageUrl": "https://i.imgflip.com/hlmst.jpg",
+    "width": 478,
+    "height": 350
+  },
+  {
+    "id": "seed_template_laughingleo",
+    "name": "Laughing Leo",
+    "imageUrl": "https://i.imgflip.com/4acd7j.png",
+    "width": 470,
+    "height": 470
+  },
+  {
+    "id": "seed_template_saythelinebart",
+    "name": "say the line bart! simpsons",
+    "imageUrl": "https://i.imgflip.com/176h0h.jpg",
+    "width": 395,
+    "height": 650
+  },
+  {
+    "id": "seed_template_twopaths",
+    "name": "Two Paths",
+    "imageUrl": "https://i.imgflip.com/54d9lj.png",
+    "width": 416,
+    "height": 416
+  },
+  {
+    "id": "seed_template_charlieconspiracy",
+    "name": "Charlie Conspiracy (Always Sunny in Philidelphia)",
+    "imageUrl": "https://i.imgflip.com/1itoun.jpg",
+    "width": 1024,
+    "height": 768
+  },
+  {
+    "id": "seed_template_drakeblank",
+    "name": "Drake Blank",
+    "imageUrl": "https://i.imgflip.com/1iruch.jpg",
+    "width": 717,
+    "height": 717
+  },
+  {
+    "id": "seed_template_starwarsyoda",
+    "name": "Star Wars Yoda",
+    "imageUrl": "https://i.imgflip.com/8k0sa.jpg",
+    "width": 620,
+    "height": 714
+  },
+  {
+    "id": "seed_template_competitionopponent",
+    "name": "whe i'm in a competition and my opponent is",
+    "imageUrl": "https://i.imgflip.com/5youx3.jpg",
+    "width": 916,
+    "height": 900
+  },
+  {
+    "id": "seed_template_lookatme",
+    "name": "Look At Me",
+    "imageUrl": "https://i.imgflip.com/hmt3v.jpg",
+    "width": 300,
+    "height": 300
+  },
+  {
+    "id": "seed_template_gusfringnotsame",
+    "name": "Gus Fring we are not the same",
+    "imageUrl": "https://i.imgflip.com/5o32tt.png",
+    "width": 700,
+    "height": 1000
+  },
+  {
+    "id": "seed_template_yodawgheardyou",
+    "name": "Yo Dawg Heard You",
+    "imageUrl": "https://i.imgflip.com/26hg.jpg",
+    "width": 500,
+    "height": 323
+  },
+  {
+    "id": "seed_template_scrolloftruth",
+    "name": "The Scroll Of Truth",
+    "imageUrl": "https://i.imgflip.com/21tqf4.jpg",
+    "width": 1280,
+    "height": 1236
+  },
+  {
+    "id": "seed_template_americanchopperargument",
+    "name": "American Chopper Argument",
+    "imageUrl": "https://i.imgflip.com/2896ro.jpg",
+    "width": 640,
+    "height": 1800
+  },
+  {
+    "id": "seed_template_leonardodicapriocheers",
+    "name": "Leonardo Dicaprio Cheers",
+    "imageUrl": "https://i.imgflip.com/39t1o.jpg",
+    "width": 600,
+    "height": 400
+  }
+]

@@ -4,6 +4,10 @@ entity type Meme {
   status: string enum('Draft', 'Published', 'Archived') = "Draft"
   postedAt: !datetime
   author: MemeAuthor
+  template: MemeTemplate
+  customImageUrl: string
 
   frontPageMemes: function(): [Meme] js
+  exportJson: member function(): json js
+  importJson: function(data: json): Meme js
 }

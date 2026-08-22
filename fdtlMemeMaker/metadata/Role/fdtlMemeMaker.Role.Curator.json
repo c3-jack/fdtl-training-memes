@@ -5,7 +5,10 @@
   "permissions": [
     "allow:Meme:read:",
     "allow:Meme::frontPageMemes",
-    "allow:MemeAuthor:read:"
+    "allow:Meme::exportJson",
+    "allow:Meme::importJson",
+    "allow:MemeAuthor:read:",
+    "allow:MemeTemplate:read:"
   ],
   "dataPermissions": []
 }

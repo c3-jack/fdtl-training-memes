@@ -1,0 +1,6 @@
+entity type MemeTemplate {
+  name: !string
+  imageUrl: !string
+  width: !int
+  height: !int
+}
