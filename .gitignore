@@ -9,5 +9,4 @@ gen/
 .env
 .env.local
 fdtlMemeMaker/.fingerprints.txt
-fdtlMemeMaker/react/
 fdtlMemeMaker/ui/
