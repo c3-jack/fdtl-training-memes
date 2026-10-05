@@ -1,6 +1,6 @@
-# FDTL Training — C3
+# ISL Training — C3
 
-The shared working repository for Week 2 of FDTL 100, Agentic Coding for Forward Deployed
+The shared working repository for Week 2 of ISL Agentic Coding Training for Forward Deployed
 Engineers. `main` holds `fdtlMemeMaker`, a small C3 package: a meme type, an author type, and
 seed data. It is deliberately imperfect — some of what it does is wrong, and some of what it
 should do is missing. Your assignment tells you which parts are yours.
@@ -14,21 +14,22 @@ order — an `ide`-rooted app first, then this package.
 c3 sync . -s <your-ide-rooted-app-url> --no-tty
 ```
 
-There is no React frontend this week. Everything is verified in the static console or with a
+`fdtlMemeMaker/react/` already ships a working `MemeFeedPage` that calls all three methods. You
+build no front end and don't touch `react/`. Everything is verified in the static console or with a
 test, against your own environment.
 
 ## Layout
 
 ```
-fdtlMemeMaker.c3pkg.json          the package itself
-src/Meme.c3typ                    caption, category, status, postedAt, a reference to MemeAuthor
-                                   and MemeTemplate
-src/Meme.js                       frontPageMemes() -- ships with a real bug, see W2-1
-src/MemeAuthor.c3typ              displayName, handle
-src/MemeTemplate.c3typ            name, imageUrl -- display data only, not a ticket
-metadata/Role/fdtlMemeMaker.Role.Curator.json   the non-admin role your feature grants target
-                                                 (both features grant against it)
-seed/                             11 memes, 6 authors, real Imgflip templates
+fdtlMemeMaker/fdtlMemeMaker.c3pkg.json          the package itself
+fdtlMemeMaker/src/Meme.c3typ                    caption, category, status, postedAt, a reference to MemeAuthor
+                                                   and MemeTemplate
+fdtlMemeMaker/src/Meme.js                       frontPageMemes() -- ships with a real bug, see W2-1
+fdtlMemeMaker/src/MemeAuthor.c3typ              displayName, handle
+fdtlMemeMaker/src/MemeTemplate.c3typ            name, imageUrl -- display data only, not a ticket
+fdtlMemeMaker/metadata/Role/fdtlMemeMaker.Role.Curator.json   the non-admin role W2-2 and W2-3 grant against
+fdtlMemeMaker/seed/                             11 memes, 6 authors, real Imgflip templates
+fdtlMemeMaker/react/                            MemeFeedPage, already built
 ```
 
 `template` on `Meme` points at a real Imgflip format (Drake Hotline Bling, Gru's Plan, and so
