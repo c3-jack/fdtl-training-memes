@@ -10,6 +10,25 @@ function frontPageMemes() {
   return result.objs;
 }
 
+function publishedCountByCategory() {
+  var result = Meme.evaluate({
+    projection: 'category, count()',
+    group: 'category',
+    filter: Filter.eq('status', 'Published'),
+    limit: -1,
+  });
+
+  var rows = [];
+  var tuples = result && result.tuples ? result.tuples : [];
+  for (var i = 0; i < tuples.length; i++) {
+    rows.push({
+      category: tuples[i].str(0),
+      publishedCount: tuples[i].number(1),
+    });
+  }
+  return rows;
+}
+
 function exportJson() {
   var full = Meme.forId(this.id).get('this, author.this, template.this');
 
