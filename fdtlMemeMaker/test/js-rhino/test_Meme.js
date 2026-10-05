@@ -37,3 +37,34 @@ describe('W2-2', function () {
     }
   });
 });
+
+describe('W2-3', function () {
+  function postedAtMillis(value) {
+    if (value == null) return 0;
+    if (typeof value.millis === 'number') return value.millis;
+    if (typeof value.millis === 'function') return value.millis();
+    var parsed = Date.parse(String(value));
+    return isNaN(parsed) ? 0 : parsed;
+  }
+
+  it('matches an independent published caption count and is not empty', function () {
+    var query = 'test';
+    var memes = Meme.searchPublishedByCaption(query);
+    var independent = Meme.fetchCount({
+      filter: Filter.eq('status', 'Published').and(Filter.containsIgnoreCase('caption', query)),
+    });
+
+    expect(independent).toBeGreaterThan(0);
+    expect(memes.length).toEqual(independent);
+
+    for (var i = 0; i < memes.length; i++) {
+      expect(memes[i].status).toEqual('Published');
+      var displayName = memes[i].author && memes[i].author.displayName;
+      expect(typeof displayName).toEqual('string');
+      expect(displayName.length).toBeGreaterThan(0);
+      if (i > 0) {
+        expect(postedAtMillis(memes[i - 1].postedAt) >= postedAtMillis(memes[i].postedAt)).toEqual(true);
+      }
+    }
+  });
+});
