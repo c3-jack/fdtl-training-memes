@@ -41,7 +41,7 @@ portable JSON blob (caption, category, status, postedAt, customImageUrl, and the
 denormalized by handle/name rather than by id, so it imports cleanly into a different
 environment) and re-created elsewhere with `Meme.importJson(<that blob>)`. None of `template`,
 `customImageUrl`, or export/import is part of the bug fix or either feature, and none of them
-touches the tickets — don't build against it.
+touches the tickets — don't build against them.
 
 ## Working in this repository
 
