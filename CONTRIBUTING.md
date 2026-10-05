@@ -4,7 +4,7 @@ The whole cohort is working against the same `fdtlMemeMaker` package during the 
 same bug, plus the same two features. The conventions below exist so that every pull request can
 be read without any of them colliding.
 
-Nothing is merged to `main` during the week. Your pull request is
+Nothing is merged to `main` until grading is done. Your pull request is
 reviewed and graded while it is open.
 
 ## Branches

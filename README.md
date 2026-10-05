@@ -1,7 +1,7 @@
 # ISL Training — C3
 
 The shared working repository for Week 2 of ISL Agentic Coding Training for Forward Deployed
-Engineers. `main` holds `fdtlMemeMaker`, a small C3 package: a meme type, an author type, and
+Engineers. `main` holds `fdtlMemeMaker`, a small C3 package: meme, author, and template types, and
 seed data. It is deliberately imperfect — some of what it does is wrong, and some of what it
 should do is missing. Your assignment tells you which parts are yours.
 
@@ -29,7 +29,7 @@ fdtlMemeMaker/src/MemeAuthor.c3typ              displayName, handle
 fdtlMemeMaker/src/MemeTemplate.c3typ            name, imageUrl -- display data only, not a ticket
 fdtlMemeMaker/metadata/Role/fdtlMemeMaker.Role.Curator.json   the non-admin role W2-2 and W2-3 grant against
 fdtlMemeMaker/seed/                             11 memes, 6 authors, real Imgflip templates
-fdtlMemeMaker/react/                            MemeFeedPage, already built
+fdtlMemeMaker/react/                            MemeFeedPage, already written; don't touch
 ```
 
 `template` on `Meme` points at a real Imgflip format (Drake Hotline Bling, Gru's Plan, and so
@@ -40,8 +40,8 @@ enforced against the other. `Meme.exportJson`/`Meme.importJson` let a meme be sh
 portable JSON blob (caption, category, status, postedAt, customImageUrl, and the author/template
 denormalized by handle/name rather than by id, so it imports cleanly into a different
 environment) and re-created elsewhere with `Meme.importJson(<that blob>)`. None of `template`,
-`customImageUrl`, or export/import is part of the bug fix or either feature, and neither of them
-touches it — don't build against it.
+`customImageUrl`, or export/import is part of the bug fix or either feature, and none of them
+touches the tickets — don't build against it.
 
 ## Working in this repository
 
