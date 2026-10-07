@@ -44,6 +44,23 @@ describe(filename, function () {
       status: 'Published',
       postedAt: postedAt,
     });
+    var searchFixtures = [
+      { id: 'test_search_old', caption: 'ZqXjV old', status: 'Published', postedAt: '2024-01-01T10:00:00Z' },
+      { id: 'test_search_new', caption: 'the zqxjv newest', status: 'Published', postedAt: '2024-01-03T10:00:00Z' },
+      { id: 'test_search_mid', caption: 'ZQXJV middle', status: 'Published', postedAt: '2024-01-02T10:00:00Z' },
+      { id: 'test_search_draft', caption: 'zqxjv draft', status: 'Draft', postedAt: '2024-01-04T10:00:00Z' },
+      { id: 'test_search_other', caption: 'no match here', status: 'Published', postedAt: '2024-01-05T10:00:00Z' },
+    ];
+    searchFixtures.forEach(function (fixture) {
+      TestApi.createEntity(this.ctx, 'Meme', {
+        id: fixture.id,
+        caption: fixture.caption,
+        category: 'Wholesome',
+        status: fixture.status,
+        postedAt: DateTime.fromString(fixture.postedAt),
+        author: { id: 'seed_memeAuthor_testa' },
+      });
+    }, this);
     this.memes = Meme.frontPageMemes();
     this.counts = Meme.publishedCountByCategory();
   });
@@ -113,6 +130,31 @@ describe(filename, function () {
       var published = Meme.fetchCount({ filter: Filter.eq('status', 'Published').and().eq('category', category) });
       expect(categories.indexOf(category) !== -1).toBe(published > 0);
     });
+  });
+
+  it('searchPublishedByCaption returns matching published memes newest first, ignoring case', function () {
+    var ids = Meme.searchPublishedByCaption('zQxJv').map(function (meme) {
+      return meme.id;
+    });
+    expect(ids).toEqual(['test_search_new', 'test_search_mid', 'test_search_old']);
+  });
+
+  it('searchPublishedByCaption excludes drafts', function () {
+    Meme.searchPublishedByCaption('zqxjv').forEach(function (meme) {
+      expect(meme.status).toEqual('Published');
+    });
+  });
+
+  it('searchPublishedByCaption populates the author displayName', function () {
+    Meme.searchPublishedByCaption('zqxjv').forEach(function (meme) {
+      expect(meme.author.displayName).toEqual('Test A');
+    });
+  });
+
+  it('searchPublishedByCaption returns nothing for a blank query', function () {
+    expect(Meme.searchPublishedByCaption('')).toEqual([]);
+    expect(Meme.searchPublishedByCaption('   ')).toEqual([]);
+    expect(Meme.searchPublishedByCaption(null)).toEqual([]);
   });
 
   afterAll(function () {
