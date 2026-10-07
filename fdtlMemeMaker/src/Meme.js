@@ -11,6 +11,18 @@ function frontPageMemes() {
   });
 }
 
+function publishedCountByCategory() {
+  var result = Meme.evaluate({
+    filter: Filter.eq('status', 'Published'),
+    group: 'category',
+    projection: 'category, count(id)',
+  });
+
+  return result.tuples.map(function (tuple) {
+    return { category: String(tuple.cells[0].value()), publishedCount: Number(tuple.cells[1].value()) };
+  });
+}
+
 function exportJson() {
   var full = Meme.forId(this.id).get('this, author.this, template.this');
 
