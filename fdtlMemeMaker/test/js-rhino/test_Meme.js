@@ -157,6 +157,37 @@ describe(filename, function () {
     expect(Meme.searchPublishedByCaption(null)).toEqual([]);
   });
 
+  describe('as Curator', function () {
+    var CURATOR = 'fdtlMemeMaker.Role.Curator';
+
+    it('can call publishedCountByCategory', function () {
+      var rows = TestRunner.asRole(
+        CURATOR,
+        Lambda.fromJsFunc(function () {
+          return Meme.publishedCountByCategory();
+        })
+      );
+      expect(rows.length).toBeGreaterThan(0);
+    });
+
+    it('can call searchPublishedByCaption with author displayName populated', function () {
+      var memes = TestRunner.asRole(
+        CURATOR,
+        Lambda.fromJsFunc(function () {
+          return Meme.searchPublishedByCaption('zqxjv');
+        })
+      );
+      expect(
+        memes.map(function (meme) {
+          return meme.id;
+        })
+      ).toEqual(['test_search_new', 'test_search_mid', 'test_search_old']);
+      memes.forEach(function (meme) {
+        expect(meme.author.displayName).toEqual('Test A');
+      });
+    });
+  });
+
   afterAll(function () {
     TestApi.teardown(this.ctx);
   });
