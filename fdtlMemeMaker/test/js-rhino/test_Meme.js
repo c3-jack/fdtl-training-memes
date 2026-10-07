@@ -30,7 +30,22 @@ describe(filename, function () {
         author: authors[id] ? { id: 'seed_memeAuthor_' + authors[id] } : null,
       });
     }, this);
+    TestApi.createEntity(this.ctx, 'Meme', {
+      id: 'test_meme_draft_wholesome',
+      caption: 'draft / only',
+      category: 'Wholesome',
+      status: 'Draft',
+      postedAt: postedAt,
+    });
+    TestApi.createEntity(this.ctx, 'Meme', {
+      id: 'test_meme_published_cursed',
+      caption: 'published / cursed',
+      category: 'Cursed',
+      status: 'Published',
+      postedAt: postedAt,
+    });
     this.memes = Meme.frontPageMemes();
+    this.counts = Meme.publishedCountByCategory();
   });
 
   it('strips the seed_memeAuthor_ prefix from every returned author id', function () {
@@ -66,6 +81,37 @@ describe(filename, function () {
     this.memes.forEach(function (meme) {
       expect(meme.status).toEqual('Published');
       expect(meme.category).toEqual('DeepFried');
+    });
+  });
+
+  it('publishedCountByCategory returns {category, publishedCount} rows', function () {
+    this.counts.forEach(function (row) {
+      expect(typeof row.category).toEqual('string');
+      expect(typeof row.publishedCount).toEqual('number');
+    });
+  });
+
+  it('publishedCountByCategory matches the published count of every listed category', function () {
+    this.counts.forEach(function (row) {
+      var expected = Meme.fetchCount({
+        filter: Filter.eq('status', 'Published').and().eq('category', row.category),
+      });
+      expect(row.publishedCount).toEqual(expected);
+    });
+  });
+
+  it('publishedCountByCategory lists each category once, only with published memes', function () {
+    var categories = this.counts.map(function (row) {
+      return row.category;
+    });
+    expect(categories.length).toEqual(categories.filter(function (c, i) {
+      return categories.indexOf(c) === i;
+    }).length);
+    expect(categories.indexOf('Cursed')).not.toBe(-1);
+    expect(categories.indexOf('DeepFried')).not.toBe(-1);
+    ['Wholesome', 'Cursed', 'DeepFried'].forEach(function (category) {
+      var published = Meme.fetchCount({ filter: Filter.eq('status', 'Published').and().eq('category', category) });
+      expect(categories.indexOf(category) !== -1).toBe(published > 0);
     });
   });
 
