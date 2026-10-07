@@ -6,7 +6,9 @@ function frontPageMemes() {
   });
 
   logger.info('frontPageMemes returned ' + result.objs.length + ' memes');
-  return result.objs;
+  return result.objs.map(function (meme) {
+    return meme.author ? meme.withAuthor(meme.author.withId(meme.author.id.replace(/^seed_memeAuthor_/, ''))) : meme;
+  });
 }
 
 function exportJson() {
