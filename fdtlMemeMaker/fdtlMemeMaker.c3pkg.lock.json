@@ -1,0 +1,7 @@
+{
+  "version" : "1.0.0",
+  "declaredDependencies" : {
+    "uiComponentLibraryReact" : "8.11"
+  },
+  "resolvedDependencies" : { }
+}
