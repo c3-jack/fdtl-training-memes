@@ -25,6 +25,20 @@ function publishedCountByCategory() {
   });
 }
 
+function searchPublishedByCaption(query) {
+  var filter = Filter.eq('status', 'Published');
+
+  if (query) {
+    filter = filter.and(Filter.containsIgnoreCase('caption', query));
+  }
+
+  return Meme.fetch({
+    filter: filter,
+    include: 'this, author.this',
+    order: 'descending(postedAt)',
+  }).objs;
+}
+
 function exportJson() {
   var full = Meme.forId(this.id).get('this, author.this, template.this');
 
