@@ -4,7 +4,7 @@ describe('W2-1 frontPageMemes', function () {
 
     expect(memes.length).toBeGreaterThan(0);
     for (var i = 0; i < memes.length; i++) {
-      expect(memes[i].author).toBeDefined();
+      expect(memes[i].author).toBeTruthy();
       expect(memes[i].author.displayName).toBeTruthy();
     }
   });
@@ -26,10 +26,10 @@ describe('W2-2 publishedCountByCategory', function () {
       })[0];
 
       if (expected > 0) {
-        expect(row).toBeDefined();
+        expect(row).toBeTruthy();
         expect(row.publishedCount).toEqual(expected);
       } else {
-        expect(row).toBeUndefined();
+        expect(row).toBeFalsy();
       }
     });
   });
