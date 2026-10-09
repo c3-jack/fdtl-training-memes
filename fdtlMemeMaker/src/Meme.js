@@ -3,6 +3,7 @@ function frontPageMemes() {
 
   var result = Meme.fetch({
     filter: Filter.eq('status', 'Published').and(Filter.eq('category', 'DeepFried')),
+    include: 'this, author.displayName',
   });
 
   logger.info('frontPageMemes returned ' + result.objs.length + ' memes');
