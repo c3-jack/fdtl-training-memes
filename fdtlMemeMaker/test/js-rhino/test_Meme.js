@@ -46,4 +46,46 @@ describe(filename, function () {
       });
     });
   });
+
+  describe('searchPublishedByCaption', function () {
+    var QUERY = 'test';
+
+    beforeAll(function () {
+      this.memes = Meme.searchPublishedByCaption(QUERY);
+      this.expectedCount = Meme.fetchCount({
+        filter: Filter.eq('status', 'Published').and(Filter.containsIgnoreCase('caption', QUERY)),
+      });
+    });
+
+    it('has matches to check', function () {
+      expect(this.expectedCount).toBeGreaterThan(0);
+    });
+
+    it('returns as many memes as an independent fetchCount', function () {
+      expect(this.memes.length).toEqual(this.expectedCount);
+    });
+
+    it('returns only published memes whose caption contains the query', function () {
+      this.memes.each(function (meme) {
+        expect(meme.status).toEqual('Published');
+        expect(meme.caption.toLowerCase()).toContain(QUERY);
+      });
+    });
+
+    it('returns newest postedAt first', function () {
+      for (var i = 1; i < this.memes.length; i++) {
+        expect(String(this.memes[i - 1].postedAt) >= String(this.memes[i].postedAt)).toBe(true);
+      }
+    });
+
+    it('returns every meme with its author displayName', function () {
+      this.memes.each(function (meme) {
+        expect(meme.author.displayName).toBeTruthy();
+      });
+    });
+
+    it('returns nothing for a blank query', function () {
+      expect(Meme.searchPublishedByCaption('   ').length).toEqual(0);
+    });
+  });
 });
