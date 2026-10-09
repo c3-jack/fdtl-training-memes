@@ -21,14 +21,15 @@ describe('test_Meme', function () {
         var expected = Meme.fetchCount({
           filter: Filter.eq('status', 'Published').and().eq('category', category),
         });
-        var row = rows.filter(function (r) {
+        var matching = rows.filter(function (r) {
           return r.category === category;
-        })[0];
+        });
 
         if (expected > 0) {
-          expect(row.publishedCount).toEqual(expected);
+          expect(matching.length).toEqual(1);
+          expect(matching[0].publishedCount).toEqual(expected);
         } else {
-          expect(row).toBeUndefined();
+          expect(matching.length).toEqual(0);
         }
       });
     });
