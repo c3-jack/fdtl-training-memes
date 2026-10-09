@@ -70,3 +70,16 @@ function publishedCountByCategory() {
     return { category: tuple.cells[0].value(), publishedCount: tuple.cells[1].value() };
   });
 }
+
+function searchPublishedByCaption(query) {
+  // A blank query would match every caption, so it returns no memes instead.
+  if (!query || !query.trim()) {
+    return [];
+  }
+
+  return Meme.fetch({
+    filter: Filter.eq('status', 'Published').and().containsIgnoreCase('caption', query),
+    order: 'descending(postedAt)',
+    include: 'this, author.this',
+  }).objs;
+}
