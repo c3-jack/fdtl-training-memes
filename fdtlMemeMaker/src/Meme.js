@@ -2,6 +2,7 @@ function frontPageMemes() {
   var logger = C3.logger('Meme');
 
   var result = Meme.fetch({
+    include: 'this, author.this',
     filter: Filter.eq('status', 'Published').and(Filter.eq('category', 'DeepFried')),
   });
 
