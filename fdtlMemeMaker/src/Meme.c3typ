@@ -10,4 +10,5 @@ entity type Meme {
   frontPageMemes: function(): [Meme] js
   exportJson: member function(): json js
   importJson: function(data: json): Meme js
+  publishedCountByCategory: function(): [json] js
 }

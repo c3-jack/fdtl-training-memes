@@ -58,3 +58,15 @@ function importJson(data) {
     customImageUrl: data.customImageUrl,
   }).create();
 }
+
+function publishedCountByCategory() {
+  var result = Meme.evaluate({
+    projection: 'category, count()',
+    group: 'category',
+    filter: Filter.eq('status', 'Published'),
+  });
+
+  return (result.tuples || []).map(function (tuple) {
+    return { category: tuple.cells[0].value(), publishedCount: tuple.cells[1].value() };
+  });
+}
