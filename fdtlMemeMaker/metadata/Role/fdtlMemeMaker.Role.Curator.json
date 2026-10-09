@@ -6,6 +6,7 @@
     "allow:Meme:read:",
     "allow:Meme::frontPageMemes",
     "allow:Meme::exportJson",
+    "allow:Meme::publishedCountByCategory",
     "allow:Meme::importJson",
     "allow:MemeAuthor:read:",
     "allow:MemeTemplate:read:"
