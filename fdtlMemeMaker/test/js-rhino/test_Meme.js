@@ -34,4 +34,34 @@ describe('test_Meme', function () {
       });
     });
   });
+
+  describe('W2-3 searchPublishedByCaption', function () {
+    it('returns every published match, newest first, with author displayName', function () {
+      var expected = Meme.fetchCount({
+        filter: Filter.eq('status', 'Published').and(Filter.containsIgnoreCase('caption', 'test')),
+      });
+      expect(expected).toBeGreaterThan(0);
+
+      var memes = Meme.searchPublishedByCaption('test');
+      expect(memes.length).toEqual(expected);
+
+      memes.forEach(function (m, i) {
+        expect(m.status).toEqual('Published');
+        expect(m.caption.toLowerCase()).toContain('test');
+        expect(m.author.displayName).toBeTruthy();
+        if (i > 0) {
+          expect(memes[i - 1].postedAt.getTime()).not.toBeLessThan(m.postedAt.getTime());
+        }
+      });
+    });
+
+    it('matches regardless of case', function () {
+      expect(Meme.searchPublishedByCaption('TEST').length).toEqual(Meme.searchPublishedByCaption('test').length);
+    });
+
+    it('returns nothing for a blank query', function () {
+      expect(Meme.searchPublishedByCaption('').length).toEqual(0);
+      expect(Meme.searchPublishedByCaption('   ').length).toEqual(0);
+    });
+  });
 });
