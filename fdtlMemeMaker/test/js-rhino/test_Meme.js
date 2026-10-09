@@ -20,15 +20,15 @@ describe('W2-2 publishedCountByCategory', function () {
       var expected = Meme.fetchCount({
         filter: Filter.eq('status', 'Published').and(Filter.eq('category', category)),
       });
-      var row = rows.filter(function (r) {
+      var matching = rows.filter(function (r) {
         return r.category === category;
-      })[0];
+      });
 
       if (expected > 0) {
-        expect(row).toBeDefined();
-        expect(row.publishedCount).toBe(expected);
+        expect(matching.length).toBe(1);
+        expect(matching[0].publishedCount).toBe(expected);
       } else {
-        expect(row).toBeUndefined();
+        expect(matching.length).toBe(0);
       }
     });
   });
