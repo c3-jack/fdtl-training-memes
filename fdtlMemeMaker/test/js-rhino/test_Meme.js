@@ -10,4 +10,27 @@ describe('test_Meme', function () {
       });
     });
   });
+
+  describe('W2-2 publishedCountByCategory', function () {
+    it('matches an independent fetchCount for every category', function () {
+      var rows = Meme.publishedCountByCategory();
+
+      expect(rows.length).toBeGreaterThan(0);
+
+      ['Wholesome', 'Cursed', 'DeepFried'].forEach(function (category) {
+        var expected = Meme.fetchCount({
+          filter: Filter.eq('status', 'Published').and().eq('category', category),
+        });
+        var row = rows.filter(function (r) {
+          return r.category === category;
+        })[0];
+
+        if (expected > 0) {
+          expect(row.publishedCount).toEqual(expected);
+        } else {
+          expect(row).toBeUndefined();
+        }
+      });
+    });
+  });
 });
