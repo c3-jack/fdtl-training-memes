@@ -18,7 +18,7 @@ function publishedCountByCategory() {
   });
 
   return result.tuples.map(function (tuple) {
-    return { category: tuple.cells[0].value, publishedCount: tuple.cells[1].value };
+    return { category: String(tuple.cells[0].value()), publishedCount: Number(tuple.cells[1].value()) };
   });
 }
 
