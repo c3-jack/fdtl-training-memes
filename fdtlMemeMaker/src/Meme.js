@@ -3,6 +3,7 @@ function frontPageMemes() {
 
   var result = Meme.fetch({
     filter: Filter.eq('status', 'Published').and(Filter.eq('category', 'DeepFried')),
+    include: 'this, author.this',
   });
 
   logger.info('frontPageMemes returned ' + result.objs.length + ' memes');
@@ -56,4 +57,29 @@ function importJson(data) {
     template: template,
     customImageUrl: data.customImageUrl,
   }).create();
+}
+
+function publishedCountByCategory() {
+  var result = Meme.evaluate({
+    projection: 'category, count()',
+    group: 'category',
+    filter: Filter.eq('status', 'Published'),
+  });
+
+  return (result.tuples || []).map(function (tuple) {
+    return { category: tuple.cells[0].value(), publishedCount: tuple.cells[1].value() };
+  });
+}
+
+function searchPublishedByCaption(query) {
+  // A blank query would match every caption, so it returns no memes instead.
+  if (!query || !query.trim()) {
+    return [];
+  }
+
+  return Meme.fetch({
+    filter: Filter.eq('status', 'Published').and().containsIgnoreCase('caption', query),
+    order: 'descending(postedAt)',
+    include: 'this, author.this',
+  }).objs;
 }
