@@ -10,6 +10,21 @@ function frontPageMemes() {
   return result.objs;
 }
 
+function publishedCountByCategory() {
+  var result = Meme.evaluate({
+    filter: Filter.eq('status', 'Published'),
+    group: 'category',
+    projection: 'category, count(id)',
+  });
+
+  var rows = [];
+  for (var i = 0; i < result.tuples.length; i++) {
+    var cells = result.tuples[i].cells;
+    rows.push({ category: cells[0].str, publishedCount: cells[1].number });
+  }
+  return rows;
+}
+
 function exportJson() {
   var full = Meme.forId(this.id).get('this, author.this, template.this');
 
