@@ -10,6 +10,18 @@ function frontPageMemes() {
   return result.objs;
 }
 
+function publishedCountByCategory() {
+  var result = Meme.evaluate({
+    filter: "status == 'Published'",
+    group: 'category',
+    projection: 'category, count()',
+  });
+
+  return result.tuples.map(function (tuple) {
+    return { category: tuple.category, publishedCount: tuple.count };
+  });
+}
+
 function exportJson() {
   var full = Meme.forId(this.id).get('this, author.this, template.this');
 
