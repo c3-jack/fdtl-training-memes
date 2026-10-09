@@ -3,10 +3,35 @@ function frontPageMemes() {
 
   var result = Meme.fetch({
     filter: Filter.eq('status', 'Published').and(Filter.eq('category', 'DeepFried')),
+    include: 'this, author.this',
   });
 
   logger.info('frontPageMemes returned ' + result.objs.length + ' memes');
   return result.objs;
+}
+
+function publishedCountByCategory() {
+  var result = Meme.evaluate({
+    filter: Filter.eq('status', 'Published'),
+    group: 'category',
+    projection: 'category, count(id)',
+  });
+
+  return result.tuples.map(function (t) {
+    return { category: t.value(0), publishedCount: t.value(1) };
+  });
+}
+
+function searchPublishedByCaption(query) {
+  if (!query || !query.trim()) {
+    return [];
+  }
+
+  return Meme.fetch({
+    filter: Filter.eq('status', 'Published').and(Filter.containsIgnoreCase('caption', query.trim())),
+    include: 'this, author.this',
+    order: 'descending(postedAt)',
+  }).objs;
 }
 
 function exportJson() {
