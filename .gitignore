@@ -10,3 +10,9 @@ gen/
 .env.local
 fdtlMemeMaker/.fingerprints.txt
 fdtlMemeMaker/ui/
+
+**/jsconfig.json
+**/.fingerprints.txt
+.vscode
+**/gen/cache/**
+.c3nbrc.js
