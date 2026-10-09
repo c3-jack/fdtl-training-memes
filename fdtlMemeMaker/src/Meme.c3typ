@@ -8,6 +8,7 @@ entity type Meme {
   customImageUrl: string
 
   frontPageMemes: function(): [Meme] js
+  publishedCountByCategory: function(): [json] js
   exportJson: member function(): json js
   importJson: function(data: json): Meme js
 }
