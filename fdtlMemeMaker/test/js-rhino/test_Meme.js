@@ -40,3 +40,22 @@ describe('W2-2 Meme.publishedCountByCategory', function () {
     }
   });
 });
+
+describe('W2-3 Meme.searchPublishedByCaption', function () {
+  it('returns published memes whose caption contains the query in any case, with author displayName', function () {
+    var query = 'test';
+    var memes = Meme.searchPublishedByCaption(query);
+    var expected = Meme.fetchCount({
+      filter: Filter.eq('status', 'Published').and(Filter.containsIgnoreCase('caption', query)),
+    });
+
+    expect(expected).toBeGreaterThan(0);
+    expect(memes.length).toEqual(expected);
+
+    for (var i = 0; i < memes.length; i++) {
+      expect(memes[i].status).toEqual('Published');
+      expect(memes[i].caption.toLowerCase().indexOf(query)).not.toEqual(-1);
+      expect(memes[i].author.displayName).toBeTruthy();
+    }
+  });
+});
