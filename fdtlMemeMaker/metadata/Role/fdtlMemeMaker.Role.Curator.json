@@ -7,6 +7,8 @@
     "allow:Meme::frontPageMemes",
     "allow:Meme::exportJson",
     "allow:Meme::importJson",
+    "allow:Meme::publishedCountByCategory",
+    "allow:Meme::searchPublishedByCaption",
     "allow:MemeAuthor:read:",
     "allow:MemeTemplate:read:"
   ],
