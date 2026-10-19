@@ -5,6 +5,7 @@
   "permissions": [
     "allow:Meme:read:",
     "allow:Meme::frontPageMemes",
+    "allow:Meme::publishedCountByCategory",
     "allow:Meme::exportJson",
     "allow:Meme::importJson",
     "allow:MemeAuthor:read:",

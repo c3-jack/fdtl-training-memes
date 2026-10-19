@@ -9,3 +9,25 @@ describe('W2-1 frontPageMemes', function () {
     });
   });
 });
+
+describe('W2-2 publishedCountByCategory', function () {
+  it('matches an independent fetchCount for every category', function () {
+    var rows = Meme.publishedCountByCategory();
+    var byCategory = {};
+    rows.forEach(function (row) {
+      byCategory[row.category] = row.publishedCount;
+    });
+
+    expect(rows.length).toBeGreaterThan(0);
+    ['Wholesome', 'Cursed', 'DeepFried'].forEach(function (category) {
+      var expected = Meme.fetchCount({
+        filter: Filter.eq('status', 'Published').and(Filter.eq('category', category)),
+      });
+      if (expected === 0) {
+        expect(byCategory[category]).toBeUndefined();
+      } else {
+        expect(byCategory[category]).toBe(expected);
+      }
+    });
+  });
+});
